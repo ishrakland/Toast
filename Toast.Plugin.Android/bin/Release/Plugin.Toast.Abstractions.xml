@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Plugin.Toast.Abstractions</name>
+    </assembly>
+    <members>
+        <member name="M:Plugin.ToastPopUp.Abstractions.IToastPopUp.ShowToastMessage(System.String)">
+            <summary>
+            ShowToast display a Toast popup
+            </summary>
+            <param name="message">Message to display</param>
+        </member>
+    </members>
+</doc>

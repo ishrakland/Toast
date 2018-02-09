@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Plugin.ToastPopUp</name>
+    </assembly>
+    <members>
+        <member name="T:Plugin.ToastPopUp.CrossToastPopUp">
+            <summary>
+            Cross Toast PopUp
+            </summary>
+        </member>
+        <member name="P:Plugin.ToastPopUp.CrossToastPopUp.IsSupported">
+            <summary>
+            Gets if the plugin is supported on the current platform.
+            </summary>
+        </member>
+        <member name="P:Plugin.ToastPopUp.CrossToastPopUp.Current">
+            <summary>
+            Current plugin implementation to use
+            </summary>
+        </member>
+        <member name="M:Plugin.ToastPopUp.CrossToastPopUp.CreateShowToast">
+            <summary>
+            Create Toast
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Plugin.ToastPopUp.ShowToastPopUp">
+            <summary>
+            Show Toast Popup
+            </summary>
+        </member>
+        <member name="M:Plugin.ToastPopUp.ShowToastPopUp.ShowToastMessage(System.String)">
+            <summary>
+            ShowToastMessage
+            </summary>
+            <param name="message"></param>
+        </member>
+    </members>
+</doc>
