@@ -28,3 +28,13 @@ C:\GitHub\Toast\Toast.Plugin\obj\Release\Toast.Plugin.csprojResolveAssemblyRefer
 C:\GitHub\Toast\Toast.Plugin\obj\Release\Toast.Plugin.csproj.CoreCompileInputs.cache
 C:\GitHub\Toast\Toast.Plugin\obj\Release\Plugin.ToastPopUp.dll
 C:\GitHub\Toast\Toast.Plugin\obj\Release\Plugin.ToastPopUp.pdb
+C:\GitHub\Toast\ToastPoup\Toast.Plugin\bin\Release\Plugin.ToastPopUp.XML
+C:\GitHub\Toast\ToastPoup\Toast.Plugin\bin\Release\Plugin.ToastPopUp.dll
+C:\GitHub\Toast\ToastPoup\Toast.Plugin\bin\Release\Plugin.ToastPopUp.pdb
+C:\GitHub\Toast\ToastPoup\Toast.Plugin\bin\Release\Plugin.Toast.Abstractions.dll
+C:\GitHub\Toast\ToastPoup\Toast.Plugin\bin\Release\Plugin.Toast.Abstractions.pdb
+C:\GitHub\Toast\ToastPoup\Toast.Plugin\bin\Release\Plugin.Toast.Abstractions.xml
+C:\GitHub\Toast\ToastPoup\Toast.Plugin\obj\Release\Toast.Plugin.csprojResolveAssemblyReference.cache
+C:\GitHub\Toast\ToastPoup\Toast.Plugin\obj\Release\Toast.Plugin.csproj.CoreCompileInputs.cache
+C:\GitHub\Toast\ToastPoup\Toast.Plugin\obj\Release\Plugin.ToastPopUp.dll
+C:\GitHub\Toast\ToastPoup\Toast.Plugin\obj\Release\Plugin.ToastPopUp.pdb

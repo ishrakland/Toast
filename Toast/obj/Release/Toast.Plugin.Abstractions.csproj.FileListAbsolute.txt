@@ -25,3 +25,11 @@ C:\GitHub\Toast\Toast\obj\Release\Toast.Plugin.Abstractions.csprojResolveAssembl
 C:\GitHub\Toast\Toast\obj\Release\Toast.Plugin.Abstractions.csproj.CoreCompileInputs.cache
 C:\GitHub\Toast\Toast\obj\Release\Plugin.Toast.Abstractions.dll
 C:\GitHub\Toast\Toast\obj\Release\Plugin.Toast.Abstractions.pdb
+C:\GitHub\Toast\ToastPoup\Toast\bin\Release\Plugin.Toast.Abstractions.XML
+C:\GitHub\Toast\ToastPoup\Toast\bin\Release\Plugin.Toast.Abstractions.dll
+C:\GitHub\Toast\ToastPoup\Toast\bin\Release\Plugin.Toast.Abstractions.pdb
+C:\GitHub\Toast\ToastPoup\Toast\bin\Release\Plugin.Toast.Abstractions.dll.CodeAnalysisLog.xml
+C:\GitHub\Toast\ToastPoup\Toast\bin\Release\Plugin.Toast.Abstractions.dll.lastcodeanalysissucceeded
+C:\GitHub\Toast\ToastPoup\Toast\obj\Release\Toast.Plugin.Abstractions.csproj.CoreCompileInputs.cache
+C:\GitHub\Toast\ToastPoup\Toast\obj\Release\Plugin.Toast.Abstractions.dll
+C:\GitHub\Toast\ToastPoup\Toast\obj\Release\Plugin.Toast.Abstractions.pdb

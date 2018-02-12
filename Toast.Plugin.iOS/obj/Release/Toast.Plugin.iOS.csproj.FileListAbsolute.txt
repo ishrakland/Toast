@@ -9,3 +9,14 @@ C:\GitHub\Toast\Toast.Plugin.iOS\obj\Release\Toast.Plugin.iOS.csprojResolveAssem
 C:\GitHub\Toast\Toast.Plugin.iOS\obj\Release\Toast.Plugin.iOS.csproj.CoreCompileInputs.cache
 C:\GitHub\Toast\Toast.Plugin.iOS\obj\Release\Plugin.ToastPopUp.dll
 C:\GitHub\Toast\Toast.Plugin.iOS\obj\Release\Plugin.ToastPopUp.pdb
+C:\GitHub\Toast\ToastPoup\Toast.Plugin.iOS\bin\Release\Plugin.ToastPopUp.xml
+C:\GitHub\Toast\ToastPoup\Toast.Plugin.iOS\bin\Release\Plugin.ToastPopUp.dll
+C:\GitHub\Toast\ToastPoup\Toast.Plugin.iOS\bin\Release\Plugin.ToastPopUp.pdb
+C:\GitHub\Toast\ToastPoup\Toast.Plugin.iOS\bin\Release\Plugin.Toast.Abstractions.dll
+C:\GitHub\Toast\ToastPoup\Toast.Plugin.iOS\bin\Release\Plugin.Toast.Abstractions.pdb
+C:\GitHub\Toast\ToastPoup\Toast.Plugin.iOS\bin\Release\Plugin.Toast.Abstractions.xml
+C:\GitHub\Toast\ToastPoup\Toast.Plugin.iOS\obj\Release\optimized\
+C:\GitHub\Toast\ToastPoup\Toast.Plugin.iOS\obj\Release\Toast.Plugin.iOS.csprojResolveAssemblyReference.cache
+C:\GitHub\Toast\ToastPoup\Toast.Plugin.iOS\obj\Release\Toast.Plugin.iOS.csproj.CoreCompileInputs.cache
+C:\GitHub\Toast\ToastPoup\Toast.Plugin.iOS\obj\Release\Plugin.ToastPopUp.dll
+C:\GitHub\Toast\ToastPoup\Toast.Plugin.iOS\obj\Release\Plugin.ToastPopUp.pdb
