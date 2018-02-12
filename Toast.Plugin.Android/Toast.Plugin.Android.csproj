@@ -9,8 +9,8 @@
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Plugin.ToastPopUp</RootNamespace>
-    <AssemblyName>Plugin.ToastPopUp</AssemblyName>
+    <RootNamespace>Plugin.Toast</RootNamespace>
+    <AssemblyName>Plugin.Toast</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
@@ -56,19 +56,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Toast.Plugin\CrossToastPopUp.cs">
+    <Compile Include="..\Toast.Plugins\CrossToastPopUp.cs">
       <Link>CrossToastPopUp.cs</Link>
     </Compile>
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ToastPopUp.cs" />
+    <Compile Include="ShowToastPopUp.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Toast\Toast.Plugin.Abstractions.csproj">
-      <Project>{9518c5ae-cb0e-49ce-9f6b-4571ddf33d35}</Project>
+    <ProjectReference Include="..\Toast.Plugin.Abstractions\Toast.Plugin.Abstractions.csproj">
+      <Project>{ce75a204-b705-4ebb-8755-6b27e36653e3}</Project>
       <Name>Toast.Plugin.Abstractions</Name>
     </ProjectReference>
   </ItemGroup>

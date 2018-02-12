@@ -8,9 +8,9 @@
     <ProjectGuid>{D30CBBDE-DD14-4459-AA82-A00B7EE82BA2}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>Plugin.ToastPopUp</RootNamespace>
+    <RootNamespace>Plugin.Toast</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>Plugin.ToastPopUp</AssemblyName>
+    <AssemblyName>Plugin.Toast</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -29,7 +29,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <DocumentationFile>bin\Release\Plugin.ToastPopUp.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\Plugin.Toast.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Configuration active|AnyCPU'">
     <OutputPath>bin\Configuration active\</OutputPath>
@@ -51,15 +51,15 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Toast.Plugin\CrossToastPopUp.cs">
+    <Compile Include="..\Toast.Plugins\CrossToastPopUp.cs">
       <Link>CrossToastPopUp.cs</Link>
     </Compile>
-    <Compile Include="ToastPopUp.cs" />
+    <Compile Include="ShowToastPopUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Toast\Toast.Plugin.Abstractions.csproj">
-      <Project>{9518c5ae-cb0e-49ce-9f6b-4571ddf33d35}</Project>
+    <ProjectReference Include="..\Toast.Plugin.Abstractions\Toast.Plugin.Abstractions.csproj">
+      <Project>{ce75a204-b705-4ebb-8755-6b27e36653e3}</Project>
       <Name>Toast.Plugin.Abstractions</Name>
     </ProjectReference>
   </ItemGroup>
