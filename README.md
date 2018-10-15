@@ -7,3 +7,4 @@ CrossToastPopUp.Current.ShowToastMessage("Message");
 
 
 Let me know about your feedback and any suggestion to ameliorate the plugin.
+#Xamarin #Forms #Toast #Plugin
