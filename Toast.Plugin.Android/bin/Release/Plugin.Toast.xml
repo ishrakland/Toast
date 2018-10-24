@@ -30,7 +30,7 @@
             Show Toast Popup
             </summary>
         </member>
-        <member name="M:Plugin.Toast.ShowToastPopUp.ShowToastMessage(System.String)">
+        <member name="M:Plugin.Toast.ShowToastPopUp.ShowToastMessage(System.String,System.String,System.String)">
             <summary>
             ShowToastMessage
             </summary>

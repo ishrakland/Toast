@@ -56,6 +56,7 @@
     </Compile>
     <Compile Include="ShowToastPopUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UIColorExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Toast.Plugin.Abstractions\Toast.Plugin.Abstractions.csproj">

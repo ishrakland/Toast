@@ -8,6 +8,6 @@ namespace Plugin.Toast.Abstractions
         /// ShowToast display a Toast popup
         /// </summary>
         /// <param name="message">Message to display</param>
-        void ShowToastMessage(string message);
+        void ShowToastMessage(string message, string bgColor, string txtColor);
     }
 }

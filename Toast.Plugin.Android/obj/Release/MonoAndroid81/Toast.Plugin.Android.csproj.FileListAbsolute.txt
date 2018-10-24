@@ -1,0 +1,17 @@
+D:\GitHub\Toast\Toast.Plugin.Android\bin\Release\Plugin.Toast.xml
+D:\GitHub\Toast\Toast.Plugin.Android\bin\Release\Plugin.Toast.dll
+D:\GitHub\Toast\Toast.Plugin.Android\bin\Release\Plugin.Toast.pdb
+D:\GitHub\Toast\Toast.Plugin.Android\bin\Release\Plugin.Toast.apk
+D:\GitHub\Toast\Toast.Plugin.Android\bin\Release\Plugin.Toast-Signed.apk
+D:\GitHub\Toast\Toast.Plugin.Android\bin\Release\Plugin.Toast.Abstractions.dll
+D:\GitHub\Toast\Toast.Plugin.Android\bin\Release\Plugin.Toast.Abstractions.pdb
+D:\GitHub\Toast\Toast.Plugin.Android\obj\Release\MonoAndroid81\Toast.Plugin.Android.csprojAssemblyReference.cache
+D:\GitHub\Toast\Toast.Plugin.Android\obj\Release\MonoAndroid81\res.flag
+D:\GitHub\Toast\Toast.Plugin.Android\obj\Release\MonoAndroid81\Toast.Plugin.Android.csproj.CoreCompileInputs.cache
+D:\GitHub\Toast\Toast.Plugin.Android\obj\Release\MonoAndroid81\Toast.Plugin.Android.csproj.CopyComplete
+D:\GitHub\Toast\Toast.Plugin.Android\obj\Release\MonoAndroid81\Plugin.Toast.dll
+D:\GitHub\Toast\Toast.Plugin.Android\obj\Release\MonoAndroid81\Plugin.Toast.pdb
+D:\GitHub\Toast\Toast.Plugin.Android\obj\Release\MonoAndroid81\android\bin\Plugin.Toast.apk
+D:\GitHub\Toast\Toast.Plugin.Android\obj\Release\MonoAndroid81\R.cs.flag
+D:\GitHub\Toast\Toast.Plugin.Android\obj\Release\MonoAndroid81\R.txt
+D:\GitHub\Toast\Toast.Plugin.Android\obj\Release\MonoAndroid81\uploadflags.txt
