@@ -1,9 +1,0 @@
-C:\GitHub\Toast\ToastPoup\Toast.Plugins\bin\Release\netstandard2.0\Toast.Plugins.deps.json
-C:\GitHub\Toast\ToastPoup\Toast.Plugins\bin\Release\netstandard2.0\Toast.Plugins.dll
-C:\GitHub\Toast\ToastPoup\Toast.Plugins\bin\Release\netstandard2.0\Toast.Plugins.pdb
-C:\GitHub\Toast\ToastPoup\Toast.Plugins\obj\Release\netstandard2.0\Toast.Plugins.csprojResolveAssemblyReference.cache
-C:\GitHub\Toast\ToastPoup\Toast.Plugins\obj\Release\netstandard2.0\Toast.Plugins.csproj.CoreCompileInputs.cache
-C:\GitHub\Toast\ToastPoup\Toast.Plugins\obj\Release\netstandard2.0\Toast.Plugins.AssemblyInfoInputs.cache
-C:\GitHub\Toast\ToastPoup\Toast.Plugins\obj\Release\netstandard2.0\Toast.Plugins.AssemblyInfo.cs
-C:\GitHub\Toast\ToastPoup\Toast.Plugins\obj\Release\netstandard2.0\Toast.Plugins.dll
-C:\GitHub\Toast\ToastPoup\Toast.Plugins\obj\Release\netstandard2.0\Toast.Plugins.pdb
