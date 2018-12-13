@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Plugin.Toast</id>
-    <version>2.0.0</version>
+    <version>2.0.1</version>
     <authors>Ishrak El Andaloussi</authors>
     <owners>Ishrak El Andaloussi</owners>
     <licenseUrl>https://github.com/ishrakland/Toast/</licenseUrl>
@@ -11,7 +11,7 @@
     <description>Toast Xamarin Plugin for iOS and Android.</description>
     <releaseNotes>Toast Xamarin Plugin for iOS and Android.</releaseNotes>
     <copyright>Copyright : Free </copyright>
-    <tags>xamarin, xamarin.forms, android, ios, uwp, plugins, plugin for xamarin, vibrate</tags>
+    <tags>xamarin, xamarin.forms, android, ios, uwp, plugins, plugin for xamarin, toast</tags>
     <dependencies>
       <group targetFramework="net">
       </group>
@@ -44,7 +44,7 @@
   </metadata>
   <files>
     <!--Core-->
-    <file src=".\Toast.Plugin\bin\Release\netstandard1.0\Plugin.Toast.*" target="lib\netstandard" />
+    <file src=".\Toast.Plugins\bin\Release\netstandard1.0\Plugin.Toast.*" target="lib\netstandard" />
 
 
     <!--UWP-->
@@ -55,7 +55,7 @@
 
 
     <!--Xamarin.iOS-->
-    <file src=".\Toast.Plugin.iOS\bin\iPhone\Release\Plugin.Toast.*" target="lib\Xamarin.iOS10" />
+    <file src=".\Toast.Plugin.iOS\bin\Release\Plugin.Toast.*" target="lib\Xamarin.iOS10" />
   </files>
 
 </package>

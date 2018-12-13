@@ -1,0 +1,9 @@
+D:\GitHub\Toast\Toast.Plugin.Abstractions\bin\Release\netstandard1.0\Plugin.Toast.Abstractions.deps.json
+D:\GitHub\Toast\Toast.Plugin.Abstractions\bin\Release\netstandard1.0\Plugin.Toast.Abstractions.dll
+D:\GitHub\Toast\Toast.Plugin.Abstractions\bin\Release\netstandard1.0\Plugin.Toast.Abstractions.pdb
+D:\GitHub\Toast\Toast.Plugin.Abstractions\obj\Release\netstandard1.0\Toast.Plugin.Abstractions.csproj.CoreCompileInputs.cache
+D:\GitHub\Toast\Toast.Plugin.Abstractions\obj\Release\netstandard1.0\Toast.Plugin.Abstractions.AssemblyInfoInputs.cache
+D:\GitHub\Toast\Toast.Plugin.Abstractions\obj\Release\netstandard1.0\Toast.Plugin.Abstractions.AssemblyInfo.cs
+D:\GitHub\Toast\Toast.Plugin.Abstractions\obj\Release\netstandard1.0\Plugin.Toast.Abstractions.dll
+D:\GitHub\Toast\Toast.Plugin.Abstractions\obj\Release\netstandard1.0\Plugin.Toast.Abstractions.pdb
+D:\GitHub\Toast\Toast.Plugin.Abstractions\obj\Release\netstandard1.0\Toast.Plugin.Abstractions.csprojAssemblyReference.cache

@@ -1,0 +1,11 @@
+D:\GitHub\Toast\Toast.Plugin.iOS\bin\Release\Plugin.Toast.xml
+D:\GitHub\Toast\Toast.Plugin.iOS\bin\Release\Plugin.Toast.dll
+D:\GitHub\Toast\Toast.Plugin.iOS\bin\Release\Plugin.Toast.pdb
+D:\GitHub\Toast\Toast.Plugin.iOS\bin\Release\Plugin.Toast.Abstractions.dll
+D:\GitHub\Toast\Toast.Plugin.iOS\bin\Release\Plugin.Toast.Abstractions.pdb
+D:\GitHub\Toast\Toast.Plugin.iOS\obj\Release\optimized\
+D:\GitHub\Toast\Toast.Plugin.iOS\obj\Release\Toast.Plugin.iOS.csprojAssemblyReference.cache
+D:\GitHub\Toast\Toast.Plugin.iOS\obj\Release\Toast.Plugin.iOS.csproj.CoreCompileInputs.cache
+D:\GitHub\Toast\Toast.Plugin.iOS\obj\Release\Toast.Plugin.iOS.csproj.CopyComplete
+D:\GitHub\Toast\Toast.Plugin.iOS\obj\Release\Plugin.Toast.dll
+D:\GitHub\Toast\Toast.Plugin.iOS\obj\Release\Plugin.Toast.pdb
