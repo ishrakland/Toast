@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v1.0": {},
     ".NETStandard,Version=v1.0/": {
-      "Plugin.Toast/2.0.1": {
+      "Plugin.Toast/2.1.0": {
         "dependencies": {
           "NETStandard.Library": "1.6.1",
           "Plugin.Toast.Abstractions": "2.0.1"
@@ -211,7 +211,7 @@
     }
   },
   "libraries": {
-    "Plugin.Toast/2.0.1": {
+    "Plugin.Toast/2.1.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

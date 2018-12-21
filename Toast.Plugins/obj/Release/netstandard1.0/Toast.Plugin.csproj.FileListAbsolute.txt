@@ -3,10 +3,10 @@ D:\GitHub\Toast\Toast.Plugins\bin\Release\netstandard1.0\Plugin.Toast.dll
 D:\GitHub\Toast\Toast.Plugins\bin\Release\netstandard1.0\Plugin.Toast.pdb
 D:\GitHub\Toast\Toast.Plugins\bin\Release\netstandard1.0\Plugin.Toast.Abstractions.dll
 D:\GitHub\Toast\Toast.Plugins\bin\Release\netstandard1.0\Plugin.Toast.Abstractions.pdb
+D:\GitHub\Toast\Toast.Plugins\obj\Release\netstandard1.0\Toast.Plugin.csprojAssemblyReference.cache
 D:\GitHub\Toast\Toast.Plugins\obj\Release\netstandard1.0\Toast.Plugin.csproj.CoreCompileInputs.cache
 D:\GitHub\Toast\Toast.Plugins\obj\Release\netstandard1.0\Toast.Plugin.AssemblyInfoInputs.cache
 D:\GitHub\Toast\Toast.Plugins\obj\Release\netstandard1.0\Toast.Plugin.AssemblyInfo.cs
 D:\GitHub\Toast\Toast.Plugins\obj\Release\netstandard1.0\Toast.Plugin.csproj.CopyComplete
 D:\GitHub\Toast\Toast.Plugins\obj\Release\netstandard1.0\Plugin.Toast.dll
 D:\GitHub\Toast\Toast.Plugins\obj\Release\netstandard1.0\Plugin.Toast.pdb
-D:\GitHub\Toast\Toast.Plugins\obj\Release\netstandard1.0\Toast.Plugin.csprojAssemblyReference.cache

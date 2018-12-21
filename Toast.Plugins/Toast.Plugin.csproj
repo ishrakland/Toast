@@ -4,7 +4,12 @@
     <TargetFramework>netstandard1.0</TargetFramework>
     <AssemblyName>Plugin.Toast</AssemblyName>
     <RootNamespace>Plugin.Toast</RootNamespace>
-    <Version>2.0.1</Version>
+    <Version>2.1.0</Version>
+    <PackageLicenseUrl>https://github.com/ishrakland/Toast/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/ishrakland/Toast/</PackageProjectUrl>
+    <RepositoryUrl />
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

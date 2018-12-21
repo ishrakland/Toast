@@ -1915,7 +1915,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "2.0.1",
+    "version": "2.1.0",
     "restore": {
       "projectUniqueName": "D:\\GitHub\\Toast\\Toast.Plugins\\Toast.Plugin.csproj",
       "projectName": "Plugin.Toast",

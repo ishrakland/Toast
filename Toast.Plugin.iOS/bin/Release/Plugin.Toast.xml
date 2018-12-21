@@ -30,10 +30,28 @@
             Show Toast PopUp
             </summary>
         </member>
-        <member name="M:Plugin.Toast.ShowToastPopUp.ShowToastMessage(System.String,System.String,System.String)">
+        <member name="M:Plugin.Toast.ShowToastPopUp.ShowToastMessage(System.String)">
             <summary>
             Show Message
             in a Toast
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Plugin.Toast.ShowToastPopUp.ShowToastError(System.String)">
+            <summary>
+            ShowToastError
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Plugin.Toast.ShowToastPopUp.ShowToastWarning(System.String)">
+            <summary>
+            ShowToastWarning
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Plugin.Toast.ShowToastPopUp.ShowToastSuccess(System.String)">
+            <summary>
+            ShowToastSuccess
             </summary>
             <param name="message"></param>
         </member>

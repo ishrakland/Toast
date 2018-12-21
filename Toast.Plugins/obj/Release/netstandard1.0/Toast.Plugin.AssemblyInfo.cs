@@ -13,11 +13,11 @@ using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("Plugin.Toast")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("2.0.1.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.0.1")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("2.1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.1.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Plugin.Toast")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Plugin.Toast")]
-[assembly: System.Reflection.AssemblyVersionAttribute("2.0.1.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("2.1.0.0")]
 
 // Généré par la classe MSBuild WriteCodeFragment.
 
