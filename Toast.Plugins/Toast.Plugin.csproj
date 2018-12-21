@@ -5,8 +5,8 @@
     <AssemblyName>Plugin.Toast</AssemblyName>
     <RootNamespace>Plugin.Toast</RootNamespace>
     <Version>2.1.0</Version>
-    <PackageLicenseUrl>https://github.com/ishrakland/Toast/blob/master/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/ishrakland/Toast/</PackageProjectUrl>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <PackageProjectUrl></PackageProjectUrl>
     <RepositoryUrl />
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
