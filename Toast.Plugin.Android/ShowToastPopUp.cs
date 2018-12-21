@@ -12,8 +12,8 @@ namespace Plugin.Toast
     public class ShowToastPopUp : IToastPopUp
     {
         private static Android.Widget.Toast toastInstance;
+                
 
-       
         /// <summary>
         /// ShowToastError
         /// </summary>
