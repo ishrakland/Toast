@@ -5,7 +5,7 @@
     <version>2.1.0</version>
     <authors>Ishrak El Andaloussi</authors>
     <owners>Ishrak El Andaloussi</owners>
-    <licenseUrl>https://github.com/ishrakland/Toast/</licenseUrl>
+    <license type="file">.\LICENSE.txt</license>
     <projectUrl>https://github.com/ishrakland/Toast/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Toast Xamarin Plugin for iOS and Android.</description>
