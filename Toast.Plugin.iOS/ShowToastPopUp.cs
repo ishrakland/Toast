@@ -1,4 +1,5 @@
-﻿using CoreGraphics;
+﻿using System.Linq;
+using CoreGraphics;
 using Foundation;
 using Plugin.Toast.Abstractions;
 using UIKit;
@@ -10,74 +11,40 @@ namespace Plugin.Toast
     /// </summary>
     public class ShowToastPopUp : IToastPopUp
     {
-        const double LONG_DELAY = 3.5;
-        const double SHORT_DELAY = 2.0;
+        const double LongDelay = 3.5;
+        const double ShortDelay = 2.0;
 
-        NSTimer alertDelay;
-        UIAlertController alert;
-        void ShowToast(string message, UIColor bgColor, UIColor txtColor)
+        NSTimer _alertDelay;
+        UIAlertController _alert;
+
+        void DismissMessage()
         {
-            ShowToastAlert(message, SHORT_DELAY, bgColor, txtColor);
+            _alert?.DismissViewController(true, null);
+            _alertDelay?.Dispose();
         }
-        void ShowToastAlert(string message, double seconds, UIColor bgColor, UIColor txtColor)
+
+        public void ShowToastMessage(string message, string backgroundHexColor = null, string textHexColor = null)
         {
-            alertDelay = NSTimer.CreateScheduledTimer(seconds, (obj) =>
+            _alertDelay = NSTimer.CreateScheduledTimer(ShortDelay, (obj) =>
             {
                 DismissMessage();
             });
-            alert = UIAlertController.Create(null, message, UIAlertControllerStyle.Alert);
-            var tView = alert.View;
-            tView.BackgroundColor = bgColor;
-            tView.TintColor = txtColor;            
-            UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(alert, true, null);
-        }
-        void DismissMessage()
-        {
-            if (alert != null)
+
+            _alert = UIAlertController.Create(null, message, UIAlertControllerStyle.Alert);
+            var tView = _alert.View;
+            if (!string.IsNullOrEmpty(backgroundHexColor))
             {
-                alert.DismissViewController(true, null);
+                var firstSubView = tView.Subviews?.FirstOrDefault();
+                var alertContentView = firstSubView?.Subviews?.FirstOrDefault();
+                if (alertContentView != null)
+                    foreach (UIView uiView in alertContentView.Subviews)
+                    {
+                        uiView.BackgroundColor = UIColor.Clear.FromHexString(backgroundHexColor);
+                    }
             }
-            if (alertDelay != null)
-            {
-                alertDelay.Dispose();
-            }
-        }
-              
-        /// <summary>
-        /// Show Message
-        /// in a Toast
-        /// </summary>
-        /// <param name="message"></param>
-        public void ShowToastMessage(string message)
-        {
-            ShowToast(message, UIColor.Black, UIColor.White);
-        }
-
-        /// <summary>
-        /// ShowToastError
-        /// </summary>
-        /// <param name="message"></param>
-        public void ShowToastError(string message)
-        {
-            ShowToast(message, UIColor.FromRGB(159, 51, 60), UIColor.White);
-        }
-
-        /// <summary>
-        /// ShowToastWarning
-        /// </summary>
-        /// <param name="message"></param>
-        public void ShowToastWarning(string message)
-        {
-            ShowToast(message, UIColor.FromRGB(250, 170, 29), UIColor.White);
-        }
-
-        /// <summary>
-        /// ShowToastSuccess
-        /// </summary>
-        /// <param name="message"></param>
-        public void ShowToastSuccess(string message)
-        {
-            ShowToast(message, UIColor.FromRGB(112, 183, 113), UIColor.White);
+            var attributedString = new NSAttributedString(message, foregroundColor: UIColor.Clear.FromHexString(textHexColor ?? "#000000"));
+            _alert.SetValueForKey(attributedString, new NSString("attributedMessage"));
+            IosHelper.GetVisibleViewController().PresentViewController(_alert, true, null);
         }
     }
 }

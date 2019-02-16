@@ -8,12 +8,12 @@ namespace Plugin.Toast
     /// </summary>
     public static class CrossToastPopUp
     {
-        static Lazy<IToastPopUp> implementation = new Lazy<IToastPopUp>(() => CreateShowToast(), System.Threading.LazyThreadSafetyMode.PublicationOnly);
+        static readonly Lazy<IToastPopUp> Implementation = new Lazy<IToastPopUp>(CreateShowToast, System.Threading.LazyThreadSafetyMode.PublicationOnly);
 
-        /// <summary>
+        /// <summary>S
         /// Gets if the plugin is supported on the current platform.
         /// </summary>
-        public static bool IsSupported => implementation.Value == null ? false : true;
+        public static bool IsSupported => Implementation.Value != null;
 
         /// <summary>
         /// Current plugin implementation to use
@@ -22,7 +22,7 @@ namespace Plugin.Toast
         {
             get
             {
-                var ret = implementation.Value;
+                var ret = Implementation.Value;
                 if (ret == null)
                 {
                     throw NotImplementedInReferenceAssembly();

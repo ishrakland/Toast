@@ -54,6 +54,7 @@
     <Compile Include="..\Toast.Plugins\CrossToastPopUp.cs">
       <Link>CrossToastPopUp.cs</Link>
     </Compile>
+    <Compile Include="IosHelper.cs" />
     <Compile Include="ShowToastPopUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UIColorExtensions.cs" />
