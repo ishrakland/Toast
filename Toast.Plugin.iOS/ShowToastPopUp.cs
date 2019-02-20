@@ -23,7 +23,7 @@ namespace Plugin.Toast
             _alertDelay?.Dispose();
         }
 
-        public void ShowToastMessage(string message, string backgroundHexColor = null, string textHexColor = null)
+        private void ShowToast(string message, string backgroundHexColor = null, string textHexColor = null)
         {
             _alertDelay = NSTimer.CreateScheduledTimer(ShortDelay, (obj) =>
             {
@@ -45,6 +45,43 @@ namespace Plugin.Toast
             var attributedString = new NSAttributedString(message, foregroundColor: UIColor.Clear.FromHexString(textHexColor ?? "#000000"));
             _alert.SetValueForKey(attributedString, new NSString("attributedMessage"));
             IosHelper.GetVisibleViewController().PresentViewController(_alert, true, null);
+        }
+
+        /// <summary>
+        /// Show Message
+        /// in a Toast
+        /// </summary>
+        /// <param name="message"></param>
+        public void ShowToastMessage(string message)
+        {
+            ShowToast(message, "#000000" , "#ffffff");
+        }
+
+        /// <summary>
+        /// ShowToastError
+        /// </summary>
+        /// <param name="message"></param>
+        public void ShowToastError(string message)
+        {
+            ShowToast(message, "#9f333c", "#ffffff");
+        }
+
+        /// <summary>
+        /// ShowToastWarning
+        /// </summary>
+        /// <param name="message"></param>
+        public void ShowToastWarning(string message)
+        {
+            ShowToast(message, "#faaa1d", "#ffffff");
+        }
+
+        /// <summary>
+        /// ShowToastSuccess
+        /// </summary>
+        /// <param name="message"></param>
+        public void ShowToastSuccess(string message)
+        {
+            ShowToast(message, "#70B771", "#ffffff");
         }
     }
 }

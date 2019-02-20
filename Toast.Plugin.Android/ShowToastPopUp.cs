@@ -13,13 +13,41 @@ namespace Plugin.Toast
     {
         private static Android.Widget.Toast _instance;
 
+        /// <summary>
+        /// Show a Toast Error
+        /// </summary>
+        /// <param name="message"></param>
+        public void ShowToastError(string message)
+        {
+            ShowMessage(message, "#9f333c", "#ffffff");
+        }
+
+        /// <summary>
+        /// ShowToastMessage
+        /// </summary>
+        /// <param name="message"></param>
+        public void ShowToastMessage(string message)
+        {
+            // To dismiss existing toast, otherwise, the screen will be populated with it if the user do so
+            ShowMessage(message, "#000000", "#ffffff");
+        }
+      
+        public void ShowToastSuccess(string message)
+        {
+            ShowMessage(message, "#70B771", "#ffffff");
+        }
+
+        public void ShowToastWarning(string message)
+        {
+            ShowMessage(message, "#faaa1d", "#ffffff");         
+        }
 
         /// <summary>
         /// ShowToastMessage
         /// </summary>
         /// <param name="message"></param>
         /// <param name="backgroundHexColor"></param>
-        public void ShowToastMessage(string message, string backgroundHexColor = null, string textHexColor = null)
+        private void ShowMessage(string message, string backgroundHexColor = null, string textHexColor = null)
         {
             // To dismiss existing toast, otherwise, the screen will be populated with it if the user do so
             _instance?.Cancel();
@@ -34,6 +62,5 @@ namespace Plugin.Toast
             _instance.Show();
         }
 
- 
     }
 }

@@ -17,22 +17,22 @@ namespace Sample
 
         private void Toast1Clicked(object sender, EventArgs e)
         {
-            CrossToastPopUp.Current.ShowToastMessage("Test");
+            CrossToastPopUp.Current.ShowToastMessage("Message");
         }
 
         private void Toast2Clicked(object sender, EventArgs e)
         {
-            CrossToastPopUp.Current.ShowToastMessage("Green", "#008000", "#000000");
+            CrossToastPopUp.Current.ShowToastSuccess("Success");
         }
 
         private void Toast3Clicked(object sender, EventArgs e)
         {
-            CrossToastPopUp.Current.ShowToastMessage("Aqua", "#00FFFF");
+            CrossToastPopUp.Current.ShowToastWarning("Warning");
         }
 
         private void Toast4Clicked(object sender, EventArgs e)
         {
-            CrossToastPopUp.Current.ShowToastMessage("Blue", "#0000FF", "#FFFFFF");
+            CrossToastPopUp.Current.ShowToastError("Error");
         }
     }
 }

@@ -6,13 +6,13 @@
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Button Text="Normal"
+        <Button Text="Message"
                 Clicked="Toast1Clicked"/>
-        <Button Text="Color 1"
+        <Button Text="Success"
                 Clicked="Toast2Clicked" />
-        <Button Text="Color 2"
+        <Button Text="Warning"
                 Clicked="Toast3Clicked" />
-        <Button Text="Color 3"
+        <Button Text="Error"
                 Clicked="Toast4Clicked" />
     </StackLayout>
 
