@@ -42,7 +42,8 @@ namespace Plugin.Toast
                     }
 
                 default:
-                    throw new ArgumentOutOfRangeException(string.Format("Invalid color value {0} is invalid. It should be a hex value of the form #RBG, #RRGGBB", hexValue));
+                    throw new ArgumentOutOfRangeException(
+                        $"Invalid color value {hexValue} is invalid. It should be a hex value of the form #RBG, #RRGGBB");
 
             }
         }

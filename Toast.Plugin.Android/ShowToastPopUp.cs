@@ -7,83 +7,33 @@ using Plugin.Toast.Abstractions;
 namespace Plugin.Toast
 {
     /// <summary>
-/// Show Toast Popup
-/// </summary>
+    /// Show Toast Popup
+    /// </summary>
     public class ShowToastPopUp : IToastPopUp
     {
-        private static Android.Widget.Toast toastInstance;
-                
+        private static Android.Widget.Toast _instance;
 
-        /// <summary>
-        /// ShowToastError
-        /// </summary>
-        /// <param name="message"></param>
-        public void ShowToastError(string message)
-        {
-            // To dismiss existing toast, otherwise, the screen will be populated with it if the user do so
-            if (toastInstance != null)
-                toastInstance.Cancel();
-            toastInstance = Android.Widget.Toast.MakeText(Android.App.Application.Context, message, ToastLength.Short);
-            View tView = toastInstance.View;
-            tView.SetBackgroundColor(Color.ParseColor("#9f333c"));
-            TextView text = (TextView)tView.FindViewById(Android.Resource.Id.Message);
-            text.SetShadowLayer(0, 0, 0, Color.Transparent);
-            text.SetTextColor(Color.White);
-            toastInstance.Show();
-        }
 
         /// <summary>
         /// ShowToastMessage
         /// </summary>
         /// <param name="message"></param>
-        public void ShowToastMessage(string message)
+        /// <param name="backgroundHexColor"></param>
+        public void ShowToastMessage(string message, string backgroundHexColor = null, string textHexColor = null)
         {
             // To dismiss existing toast, otherwise, the screen will be populated with it if the user do so
-            if (toastInstance != null)
-                toastInstance.Cancel();
-            toastInstance = Android.Widget.Toast.MakeText(Android.App.Application.Context, message, ToastLength.Short);
-            View tView = toastInstance.View;
-            CornerPathEffect cornerPathEffect = new CornerPathEffect(20);
+            _instance?.Cancel();
+            _instance = Android.Widget.Toast.MakeText(Android.App.Application.Context, message, ToastLength.Short);
+            View tView = _instance.View;
+            if (!string.IsNullOrEmpty(backgroundHexColor))
+                tView.Background.SetColorFilter(Color.ParseColor(backgroundHexColor), PorterDuff.Mode.SrcIn);//Gets the actual oval background of the Toast then sets the color filter
+
             TextView text = (TextView)tView.FindViewById(Android.Resource.Id.Message);
-            text.SetShadowLayer(0, 0, 0, Color.Transparent);
-            toastInstance.Show();
+            if (!string.IsNullOrEmpty(textHexColor))
+                text.SetTextColor(Color.ParseColor(textHexColor));
+            _instance.Show();
         }
 
-        /// <summary>
-        /// ShowToastSuccess
-        /// </summary>
-        /// <param name="message"></param>
-        public void ShowToastSuccess(string message)
-        {  
-            // To dismiss existing toast, otherwise, the screen will be populated with it if the user do so
-            if (toastInstance != null)
-                toastInstance.Cancel();
-            toastInstance = Android.Widget.Toast.MakeText(Android.App.Application.Context, message, ToastLength.Short);
-            View tView = toastInstance.View;
-            tView.SetBackgroundColor(Color.ParseColor("#70B771"));
-            TextView text = (TextView)tView.FindViewById(Android.Resource.Id.Message);
-            text.SetShadowLayer(0, 0, 0, Color.Transparent);
-            text.SetTextColor(Color.White);
-            toastInstance.Show();
-
-        }
-
-        /// <summary>
-        /// ShowToastWarning
-        /// </summary>
-        /// <param name="message"></param>
-        public void ShowToastWarning(string message)
-        {
-            // To dismiss existing toast, otherwise, the screen will be populated with it if the user do so
-            if (toastInstance != null)
-                toastInstance.Cancel();
-            toastInstance = Android.Widget.Toast.MakeText(Android.App.Application.Context, message, ToastLength.Short);
-            View tView = toastInstance.View;
-            tView.SetBackgroundColor(Color.ParseColor("#faaa1d"));
-            TextView text = (TextView)tView.FindViewById(Android.Resource.Id.Message);
-            text.SetShadowLayer(0, 0, 0, Color.Transparent);
-            text.SetTextColor(Color.White);
-            toastInstance.Show();
-        }
+ 
     }
 }
