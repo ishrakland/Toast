@@ -42,7 +42,7 @@
       </group>
     </dependencies>
   </metadata>
-  <files>Merci
+  <files>
     <!--Core-->
     <file src=".\Toast.Plugins\bin\Release\netstandard1.0\Plugin.Toast.*" target="lib\netstandard" />
 
