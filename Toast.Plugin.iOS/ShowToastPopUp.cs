@@ -83,5 +83,16 @@ namespace Plugin.Toast
         {
             ShowToast(message, "#70B771", "#ffffff");
         }
+
+        /// <summary>
+        /// Show Custom Toast
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="bgColor"></param>
+        /// <param name="txtColor"></param>
+        public void ShowCustomToast(string message, string bgColor, string txtColor)
+        {
+            ShowToast(message, bgColor, txtColor);
+        }
     }
 }

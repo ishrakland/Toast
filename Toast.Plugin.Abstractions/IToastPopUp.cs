@@ -4,7 +4,14 @@ namespace Plugin.Toast.Abstractions
 {
     public interface IToastPopUp
     {
-        
+
+        /// <summary>
+        /// Show Custom Toast
+        /// </summary>
+        /// <param name="message"></param>
+        void ShowCustomToast(string message, string bgColor, string txtColor);
+
+
         /// <summary>
         /// ShowToastMessage display a Toast MESSAGE
         /// </summary>

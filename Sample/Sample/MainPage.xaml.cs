@@ -34,5 +34,10 @@ namespace Sample
         {
             CrossToastPopUp.Current.ShowToastError("Error");
         }
+
+        private void Toast5Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

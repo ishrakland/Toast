@@ -43,6 +43,7 @@
     </dependencies>
   </metadata>
   <files>
+    <file src=".\LIC*" target="" />
     <!--Core-->
     <file src=".\Toast.Plugins\bin\Release\netstandard1.0\Plugin.Toast.*" target="lib\netstandard" />
 
