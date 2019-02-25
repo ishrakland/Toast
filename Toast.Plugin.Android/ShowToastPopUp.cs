@@ -43,11 +43,19 @@ namespace Plugin.Toast
             ShowMessage(message, "#000000", "#ffffff");
         }
       
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="message"></param>
         public void ShowToastSuccess(string message)
         {
             ShowMessage(message, "#70B771", "#ffffff");
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="message"></param>
         public void ShowToastWarning(string message)
         {
             ShowMessage(message, "#faaa1d", "#ffffff");         

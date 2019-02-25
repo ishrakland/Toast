@@ -37,7 +37,7 @@ namespace Sample
 
         private void Toast5Clicked(object sender, EventArgs e)
         {
-
+            CrossToastPopUp.Current.ShowCustomToast("Custom Toast", "#EE82EE", "#4d4c49");
         }
     }
 }

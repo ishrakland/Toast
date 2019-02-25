@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:Sample"
              x:Class="Sample.MainPage">
 
-    <StackLayout>
+    <StackLayout >
         <!-- Place new controls here -->
         <Button Text="Message"
                 Clicked="Toast1Clicked"/>
