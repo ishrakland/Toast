@@ -23,9 +23,19 @@ namespace Plugin.Toast
             _alertDelay?.Dispose();
         }
 
-        private void ShowToast(string message, string backgroundHexColor = null, string textHexColor = null)
+        private double ConvertCommonToastLengthToPlatformSpecific(ToastLength toastLength)
         {
-            _alertDelay = NSTimer.CreateScheduledTimer(ShortDelay, (obj) =>
+            if (toastLength == ToastLength.LONG)
+                return LongDelay;
+            return ShortDelay;
+        }
+
+
+        private void ShowToast(string message, string backgroundHexColor = null, string textHexColor = null, ToastLength toastLength = ToastLength.SHORT)
+        {
+            double delay = ConvertCommonToastLengthToPlatformSpecific(toastLength);
+
+            _alertDelay = NSTimer.CreateScheduledTimer(delay, (obj) =>
             {
                 DismissMessage();
             });
@@ -52,36 +62,36 @@ namespace Plugin.Toast
         /// in a Toast
         /// </summary>
         /// <param name="message"></param>
-        public void ShowToastMessage(string message)
+        public void ShowToastMessage(string message, ToastLength toastLength = ToastLength.SHORT)
         {
-            ShowToast(message, "#000000" , "#ffffff");
+            ShowToast(message, "#000000" , "#ffffff", toastLength);
         }
 
         /// <summary>
         /// ShowToastError
         /// </summary>
         /// <param name="message"></param>
-        public void ShowToastError(string message)
+        public void ShowToastError(string message, ToastLength toastLength = ToastLength.SHORT)
         {
-            ShowToast(message, "#9f333c", "#ffffff");
+            ShowToast(message, "#9f333c", "#ffffff", toastLength);
         }
 
         /// <summary>
         /// ShowToastWarning
         /// </summary>
         /// <param name="message"></param>
-        public void ShowToastWarning(string message)
+        public void ShowToastWarning(string message, ToastLength toastLength = ToastLength.SHORT)
         {
-            ShowToast(message, "#faaa1d", "#ffffff");
+            ShowToast(message, "#faaa1d", "#ffffff", toastLength);
         }
 
         /// <summary>
         /// ShowToastSuccess
         /// </summary>
         /// <param name="message"></param>
-        public void ShowToastSuccess(string message)
+        public void ShowToastSuccess(string message, ToastLength toastLength = ToastLength.SHORT)
         {
-            ShowToast(message, "#70B771", "#ffffff");
+            ShowToast(message, "#70B771", "#ffffff", toastLength);
         }
 
         /// <summary>
@@ -90,9 +100,9 @@ namespace Plugin.Toast
         /// <param name="message"></param>
         /// <param name="bgColor"></param>
         /// <param name="txtColor"></param>
-        public void ShowCustomToast(string message, string bgColor, string txtColor)
+        public void ShowCustomToast(string message, string bgColor, string txtColor, ToastLength toastLength = ToastLength.SHORT)
         {
-            ShowToast(message, bgColor, txtColor);
+            ShowToast(message, bgColor, txtColor, toastLength);
         }
     }
 }
