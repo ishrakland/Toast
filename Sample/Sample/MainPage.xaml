@@ -5,7 +5,7 @@
              x:Class="Sample.MainPage">
 
     <StackLayout >
-        <StackLayout Orientation="Horizontal">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
             <Label Text="Short toast"></Label>
             <Switch x:Name="toastDuration" Toggled="Handle_Toggled"></Switch>
             <Label Text="Long toast"></Label>
