@@ -1,10 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Sample"
              x:Class="Sample.MainPage">
 
     <StackLayout >
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <Label Text="Short toast"></Label>
+            <Switch x:Name="toastDuration" Toggled="Handle_Toggled"></Switch>
+            <Label Text="Long toast"></Label>
+        </StackLayout>
         <!-- Place new controls here -->
         <Button Text="Message"
                 Clicked="Toast1Clicked"/>
