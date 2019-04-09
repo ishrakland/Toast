@@ -1,117 +1,119 @@
 ﻿using Plugin.Toast.Abstractions;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
 using Windows.Data.Xml.Dom;
+using Windows.UI;
 using Windows.UI.Notifications;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Media;
 
 namespace Plugin.Toast
 {
     public class ShowToastPopUp : IToastPopUp
     {
-        public void ShowToastError(string message)
+        Popup popup = new Popup();
+        Canvas canvas = new Canvas();
+
+        /// <summary>
+        /// Show Custom Toast
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="bgColor"></param>
+        /// <param name="txtColor"></param>
+        public void ShowCustomToast(string message, string bgColor, string txtColor, Abstractions.ToastLength toastLength = Abstractions.ToastLength.Short)
         {
-            ToastTemplateType toastTemplate = ToastTemplateType.ToastImageAndText01;
-            XmlDocument toastXml = ToastNotificationManager.GetTemplateContent(toastTemplate);
-            // Set Text
-            XmlNodeList toastTextElements = toastXml.GetElementsByTagName("text");
-            toastTextElements[0].InnerText = message;
-            // toast duration
-            IXmlNode toastNode = toastXml.SelectSingleNode("/toast");
-            ((XmlElement)toastNode).SetAttribute("duration", "long");
-
-            // Create the toast notification based on the XML content you've specified.
-            ToastNotification toast = new ToastNotification(toastXml);
-
-            // Send your toast notification.
-            ToastNotificationManager.CreateToastNotifier().Show(toast);
+            ShowMessage(message, bgColor, txtColor, toastLength);
         }
 
-        public void ShowToastMessage(string message)
+        /// <summary>
+        /// Show a Toast Error
+        /// </summary>
+        /// <param name="message"></param>
+        public void ShowToastError(string message, Abstractions.ToastLength toastLength = Abstractions.ToastLength.Short)
         {
-            ToastTemplateType toastTemplate = ToastTemplateType.ToastImageAndText01;
-            XmlDocument toastXml = ToastNotificationManager.GetTemplateContent(toastTemplate);
-            // Set Text
-            XmlNodeList toastTextElements = toastXml.GetElementsByTagName("text");
-            toastTextElements[0].InnerText = message;
-            // toast duration
-            IXmlNode toastNode = toastXml.SelectSingleNode("/toast");
-            ((XmlElement)toastNode).SetAttribute("duration", "long");
-
-            // Create the toast notification based on the XML content you've specified.
-            ToastNotification toast = new ToastNotification(toastXml);
-
-            // Send your toast notification.
-            ToastNotificationManager.CreateToastNotifier().Show(toast);
+            ShowMessage(message, "#9f333c", "#ffffff", toastLength);
         }
 
-        public void ShowToastSuccess(string message)
+        /// <summary>
+        /// ShowToastMessage
+        /// </summary>
+        /// <param name="message"></param>
+        public void ShowToastMessage(string message, Abstractions.ToastLength toastLength = Abstractions.ToastLength.Short)
         {
-            ToastTemplateType toastTemplate = ToastTemplateType.ToastImageAndText01;
-            XmlDocument toastXml = ToastNotificationManager.GetTemplateContent(toastTemplate);
-            // Set Text
-            XmlNodeList toastTextElements = toastXml.GetElementsByTagName("text");
-            toastTextElements[0].InnerText = message;
-            // toast duration
-            IXmlNode toastNode = toastXml.SelectSingleNode("/toast");
-            ((XmlElement)toastNode).SetAttribute("duration", "long");
-
-            // Create the toast notification based on the XML content you've specified.
-            ToastNotification toast = new ToastNotification(toastXml);
-
-            // Send your toast notification.
-            ToastNotificationManager.CreateToastNotifier().Show(toast);
+            // To dismiss existing toast, otherwise, the screen will be populated with it if the user do so
+            ShowMessage(message, "#000000", "#ffffff", toastLength);
         }
 
-        public void ShowToastWarning(string message)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="message"></param>
+        public void ShowToastSuccess(string message, Abstractions.ToastLength toastLength = Abstractions.ToastLength.Short)
         {
-            ToastTemplateType toastTemplate = ToastTemplateType.ToastImageAndText01;
-            XmlDocument toastXml = ToastNotificationManager.GetTemplateContent(toastTemplate);
-            // Set Text
-            XmlNodeList toastTextElements = toastXml.GetElementsByTagName("text");
-            toastTextElements[0].InnerText = message;
-            // toast duration
-            IXmlNode toastNode = toastXml.SelectSingleNode("/toast");
-            ((XmlElement)toastNode).SetAttribute("duration", "long");
-
-            // Create the toast notification based on the XML content you've specified.
-            ToastNotification toast = new ToastNotification(toastXml);
-
-            // Send your toast notification.
-            ToastNotificationManager.CreateToastNotifier().Show(toast);
+            ShowMessage(message, "#70B771", "#ffffff", toastLength);
         }
 
-        public void ShowToastMessage(string message, string backgroundHexColor = null, string textHexColor = null)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="message"></param>
+        public void ShowToastWarning(string message, Abstractions.ToastLength toastLength = Abstractions.ToastLength.Short)
         {
-            ToastTemplateType toastTemplate = ToastTemplateType.ToastImageAndText01;
-            XmlDocument toastXml = ToastNotificationManager.GetTemplateContent(toastTemplate);
-            // Set Text
-            XmlNodeList toastTextElements = toastXml.GetElementsByTagName("text");
-            toastTextElements[0].InnerText = message;
-            // toast duration
-            IXmlNode toastNode = toastXml.SelectSingleNode("/toast");
-            ((XmlElement)toastNode).SetAttribute("duration", "long");
+            ShowMessage(message, "#faaa1d", "#ffffff", toastLength);
+        }
+        public void ShowMessage(string message, string bgColor, string txtColor, ToastLength toastLength = ToastLength.Short)
+        {
+            if (!string.IsNullOrEmpty(bgColor))
+                canvas.Background = ColorToBrush(bgColor);
+            TextBlock popupText = new TextBlock();
+            popupText.Text = message;
+            if (!string.IsNullOrEmpty(txtColor))
+                popupText.Foreground = ColorToBrush(txtColor);
+            canvas.Children.Add(popupText);
+            popup.Child = canvas;
+            popup.IsOpen = true;
 
-            // Create the toast notification based on the XML content you've specified.
-            ToastNotification toast = new ToastNotification(toastXml);
+            DispatcherTimer timer = new DispatcherTimer();
+            if (toastLength.Equals(ToastLength.Short))
+            {
+                timer.Interval = TimeSpan.FromSeconds(5);
+            }
+            else
+            {
+                timer.Interval = TimeSpan.FromSeconds(15);
+            }
 
-            // Send your toast notification.
-            ToastNotificationManager.CreateToastNotifier().Show(toast);
+            timer.Tick += Timer_Tick;
+
+            timer.Start();
         }
 
-        public void ShowCustomToast(string message, string bgColor, string txtColor)
-        {
-            ToastTemplateType toastTemplate = ToastTemplateType.ToastImageAndText01;
-            XmlDocument toastXml = ToastNotificationManager.GetTemplateContent(toastTemplate);
-            // Set Text
-            XmlNodeList toastTextElements = toastXml.GetElementsByTagName("text");
-            toastTextElements[0].InnerText = message;
-            // toast duration
-            IXmlNode toastNode = toastXml.SelectSingleNode("/toast");
-            ((XmlElement)toastNode).SetAttribute("duration", "long");
-
-            // Create the toast notification based on the XML content you've specified.
-            ToastNotification toast = new ToastNotification(toastXml);
-
-            // Send your toast notification.
-            ToastNotificationManager.CreateToastNotifier().Show(toast);
+        private void Timer_Tick(object sender, object e)
+        {           
+                ((DispatcherTimer)sender).Stop();
+                if (popup.IsOpen)
+                    popup.IsOpen = false;
+          
         }
+
+        public static Brush ColorToBrush(string color) // color = "#E7E44D"
+        {
+            color = color.Replace("#", "");
+            if (color.Length == 6)
+            {
+                return new SolidColorBrush(ColorHelper.FromArgb(255,
+                    byte.Parse(color.Substring(0, 2), System.Globalization.NumberStyles.HexNumber),
+                    byte.Parse(color.Substring(2, 2), System.Globalization.NumberStyles.HexNumber),
+                    byte.Parse(color.Substring(4, 2), System.Globalization.NumberStyles.HexNumber)));
+            }
+            else
+            {
+                return null;
+            }
+        }
+   
     }
 }
