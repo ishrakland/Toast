@@ -15,7 +15,7 @@ namespace Plugin.Toast
     public class ShowToastPopUp : IToastPopUp
     {
         Popup popup = new Popup();
-        Canvas canvas = new Canvas();
+        Grid grid = new Grid();
 
         /// <summary>
         /// Show Custom Toast
@@ -67,13 +67,17 @@ namespace Plugin.Toast
         public void ShowMessage(string message, string bgColor, string txtColor, ToastLength toastLength = ToastLength.Short)
         {
             if (!string.IsNullOrEmpty(bgColor))
-                canvas.Background = ColorToBrush(bgColor);
+                grid.Background = ColorToBrush(bgColor);
             TextBlock popupText = new TextBlock();
             popupText.Text = message;
+            popupText.Margin = new Thickness(8);
             if (!string.IsNullOrEmpty(txtColor))
                 popupText.Foreground = ColorToBrush(txtColor);
-            canvas.Children.Add(popupText);
-            popup.Child = canvas;
+            grid.Children.Add(popupText);
+            grid.CornerRadius = new CornerRadius(20);
+            popup.Child = grid;
+            popup.HorizontalOffset = (Window.Current.Bounds.Width) / 2;
+            popup.VerticalOffset = (Window.Current.Bounds.Height - grid.ActualHeight) - 50;
             popup.IsOpen = true;
 
             DispatcherTimer timer = new DispatcherTimer();
@@ -95,8 +99,7 @@ namespace Plugin.Toast
         {           
                 ((DispatcherTimer)sender).Stop();
                 if (popup.IsOpen)
-                    popup.IsOpen = false;
-          
+                    popup.IsOpen = false;         
         }
 
         public static Brush ColorToBrush(string color) // color = "#E7E44D"
