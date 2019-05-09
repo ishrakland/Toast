@@ -16,6 +16,10 @@
     <DefineConstants>TRACE;NETSTANDARD2_0;</DefineConstants>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>bin\Release\netstandard2.0\</OutputPath>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\Toast.Plugin.Abstractions\Toast.Plugin.Abstractions.csproj" />
   </ItemGroup>
