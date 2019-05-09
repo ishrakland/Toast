@@ -17,6 +17,10 @@ namespace Plugin.Toast
         Popup popup = new Popup();
         Grid grid = new Grid();
 
+        public ShowToastPopUp()
+        {
+        }
+
         /// <summary>
         /// Show Custom Toast
         /// </summary>
@@ -66,6 +70,7 @@ namespace Plugin.Toast
         }
         public void ShowMessage(string message, string bgColor, string txtColor, ToastLength toastLength = ToastLength.Short)
         {
+             grid = new Grid();
             if (!string.IsNullOrEmpty(bgColor))
                 grid.Background = ColorToBrush(bgColor);
             TextBlock popupText = new TextBlock();
