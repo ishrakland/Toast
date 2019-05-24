@@ -9,5 +9,6 @@ With Plugin.Toast 2.1.1  You can create your custom Toasts  now!! enjoy!!
 Let me know about your feedback and any suggestion to ameliorate the plugin.
 #Xamarin #Forms #Toast #Plugin
 
+Thank you in advance for any contribution.
 
 : ![alt-text](https://github.com/ishrakland/Toast/blob/master/IMG/Toast2.1.1.gif)
