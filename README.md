@@ -6,6 +6,8 @@ To display Toast PopUp Write in PCL project classes or code behind  this line of
 CrossToastPopUp.Current.ShowToastMessage("Message");
 With Plugin.Toast 2.1.1  You can create your custom Toasts  now!! enjoy!!
 
+Create your #Custom #Toasts, with custom Colors and durations
+
 Let me know about your feedback and any suggestion to ameliorate the plugin.
 #Xamarin #Forms #Toast #Plugin
 
