@@ -26,7 +26,7 @@ namespace Plugin.Toast
         private void ShowToast(string message, string backgroundHexColor = null, string textHexColor = null, Plugin.Toast.Abstractions.ToastLength toastLength = ToastLength.Short)
         {
             var delay = toastLength == ToastLength.Short ? ShortDelay : LongDelay;
-
+            _alert?.Dispose();
             _alertDelay = NSTimer.CreateScheduledTimer(delay, (obj) =>
             {
                 DismissMessage();
