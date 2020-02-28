@@ -47,5 +47,11 @@ namespace Sample
         {
             CrossToastPopUp.Current.ShowCustomToast("Custom Toast", "#EE82EE", "#4d4c49", toastLength);
         }
+        private async void Toast6Clicked(object sender, EventArgs e)
+        {
+            CrossToastPopUp.Current.ShowToastMessage("Toast 1", toastLength);
+            await Task.Delay(1500);
+            CrossToastPopUp.Current.ShowToastMessage("Toast 2", toastLength);  
+        }
     }
 }
