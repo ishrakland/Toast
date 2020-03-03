@@ -1,5 +1,5 @@
-﻿using System.Linq;
-using CoreGraphics;
+﻿using System;
+using System.Linq;
 using Foundation;
 using Plugin.Toast.Abstractions;
 using UIKit;
@@ -14,26 +14,52 @@ namespace Plugin.Toast
         const double LongDelay = 3.5;
         const double ShortDelay = 2.0;
 
-        NSTimer _alertDelay;
-        UIAlertController _alert;
+        NSTimer _lastAlertDelay;
+        UIAlertController _lastAlert;
 
-        void DismissMessage()
+        void DismissMessage(UIAlertController alert, NSTimer alertDelay, Action complete)
         {
-            _alert?.DismissViewController(true, null);
-            _alertDelay?.Dispose();
+            alert?.DismissViewController(true, complete);
+            alert?.Dispose();
+            alertDelay?.Dispose();
+            _lastAlertDelay = null;
+            _lastAlert = null;
         }
 
         private void ShowToast(string message, string backgroundHexColor = null, string textHexColor = null, Plugin.Toast.Abstractions.ToastLength toastLength = ToastLength.Short)
         {
-            var delay = toastLength == ToastLength.Short ? ShortDelay : LongDelay;
-            _alert?.Dispose();
-            _alertDelay = NSTimer.CreateScheduledTimer(delay, (obj) =>
+            if (_lastAlertDelay != null && _lastAlert != null)
             {
-                DismissMessage();
+                DismissMessage(_lastAlert, _lastAlertDelay, () => { CreateToast(message, backgroundHexColor, textHexColor, toastLength); });
+            }
+            else
+            {
+                CreateToast(message, backgroundHexColor, textHexColor, toastLength);
+            }
+        }
+
+        /// <summary>
+        /// Create Toast
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="backgroundHexColor"></param>
+        /// <param name="textHexColor"></param>
+        /// <param name="toastLength"></param>
+        private void CreateToast(string message, string backgroundHexColor = null, string textHexColor = null, Plugin.Toast.Abstractions.ToastLength toastLength = ToastLength.Short)
+        { 
+            var delay = toastLength == ToastLength.Short ? ShortDelay : LongDelay;
+
+            var alert = UIAlertController.Create(null, message, UIAlertControllerStyle.Alert);
+
+            var alertDelay = NSTimer.CreateScheduledTimer(delay, (obj) =>
+            {
+                DismissMessage(alert, obj, null);
             });
 
-            _alert = UIAlertController.Create(null, message, UIAlertControllerStyle.Alert);
-            var tView = _alert.View;
+            _lastAlert = alert;
+            _lastAlertDelay = alertDelay;
+
+            var tView = alert.View;
             if (!string.IsNullOrEmpty(backgroundHexColor))
             {
                 var firstSubView = tView.Subviews?.FirstOrDefault();
@@ -45,8 +71,8 @@ namespace Plugin.Toast
                     }
             }
             var attributedString = new NSAttributedString(message, foregroundColor: UIColor.Clear.FromHexString(textHexColor ?? "#000000"));
-            _alert.SetValueForKey(attributedString, new NSString("attributedMessage"));
-            IosHelper.GetVisibleViewController().PresentViewController(_alert, true, null);
+            alert.SetValueForKey(attributedString, new NSString("attributedMessage"));
+            IosHelper.GetVisibleViewController().PresentViewController(alert, true, null);
         }
 
         /// <summary>

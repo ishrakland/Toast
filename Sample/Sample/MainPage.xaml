@@ -20,6 +20,7 @@
         <Button Text="Error"
                 Clicked="Toast4Clicked" />
         <Button Text="Custom Toast" Clicked="Toast5Clicked" />
+        <Button Text="Multiple Toast" Clicked="Toast6Clicked" />
     </StackLayout>
 
 </ContentPage>
