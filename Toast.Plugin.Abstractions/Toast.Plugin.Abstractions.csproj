@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Plugin.Toast.Abstractions</AssemblyName>
     <RootNamespace>Plugin.Toast.Abstractions</RootNamespace>
     <Version>2.0.1</Version>
